@@ -1,0 +1,541 @@
+#1c
+
+length(gender)
+length(age)
+length(first_names)
+length(last_names)
+length(marital_status)
+length(nationality)
+length(rate_of_relationship)
+
+#Question 2
+Age <- c(30, 50)
+print(Age)
+mode(Age)
+
+#Question 3
+sex <- c('Male', 'Female', 'Male', 'Female', 'Male')
+print(sex)
+mode(sex)
+data.frame(Age, sex)
+excel_data < data.frame(Age, sex)
+
+
+length(Age)
+typeof(Age)
+class(sex)
+as.character(Age)
+
+
+
+#Question 4
+?data.frame
+ or
+help(data.frame)
+
+
+
+
+#Assignment 2 
+sum(c(2, 3))
+
+add_three_numbers <- function(x, y, z){    #Examples of creating functions 
+  
+  add <- x + y + z
+  
+  return(add)
+}
+
+add_three_numbers(2, 3, 4)
+
+Cal_area <- function(p, r){
+  
+  area <- p*r^2
+  
+  return(area)
+}
+
+Cal_area(2,3)
+
+
+
+#Calculating the shrub volume 
+cal_shrub_vol <- function(length, width, height){
+  
+  area <- length * width
+  
+  volume <- area * height
+  
+  return (volume)
+}
+
+cal_shrub_vol (2, 3.5, 4.3)
+
+
+
+
+#COMPOSING FUNCTIONS
+
+#Converting fahrenheit to celsius
+
+fahrenheit_to_celsius <- function(temp_F) {
+  
+  temp_C <- (temp_F - 32)* 5/9
+  
+  return(temp_C)
+}
+
+fahrenheit_to_celsius(32)
+
+#The boiling point of water
+
+fahrenheit_to_celsius(212)
+
+
+Celsius_to_kelvin <- function(temp_C){
+  
+  temp_K <- temp_C + 273.15
+  
+  return(temp_K)
+}
+
+Celsius_to_kelvin(0)
+
+
+
+#Assignment 2
+
+Names <- c("Seth", "Patrick", "Kelvin", "Eben", "Irene", "General", "Eric", "Owusu", "Richie", "Unique")
+Age <- c(28, 34, 29, 35, 65, 36, 74, 20, 100, 45)
+
+
+
+data.frame(Names, Age)
+
+df <- data.frame(Names, Age)
+print (df)
+
+
+#View it in excel format
+excel_data <- data.frame(Names, Age)
+print(excel_data)
+
+colnames(excel_data)
+glimpse(excel_data)
+
+
+#1aDescriptive analyses
+
+#The mean
+mean_age <- mean(Age) 
+print(mean_age)
+
+mean(Age, trim = 0.1) #Removing 10% from the bottom and top from the data
+
+#OR mean(Age)
+
+#The median
+median_age <- median(Age)
+print(median_age) 
+
+
+#The standard deviation 
+standv_age <- sd(Age)
+print (standv_age)
+
+#the variance
+variance_age <- var(Age)
+print(variance_age) 
+
+#OR taking the square root of the variance
+
+sdv_age <- sqrt(var(Age))
+print(sdv_age)
+
+
+#The minimum age
+
+min_age <- min(Age)
+
+#The maximum age
+max_age <- max(Age)
+
+#The range age
+range_age <- range(Age)
+
+
+#The quantile
+quantile_age1 <- quantile(Age, probs = 90/100)
+
+quantile_age2 <- quantile(Age, probs = c(0.2, 0.5, 0.9, 1))
+print(quantile_age2)
+
+#The sum of the ages
+sume_age <- sum(Age)
+
+
+#The summary of the data set
+summary(df)
+
+summary(Age)
+summary(Names)
+
+
+#1C. Creating a function that gives you the column name
+col_nmaes <- function (df){
+  
+  col_names2 <- colnames(df)
+  
+  return (numbcol)
+  
+}
+
+
+
+#Calculating net_present value
+
+# t = 1, 2, 3, 4, ...n
+
+#formula = profit/(1+r)^t
+
+#Time = 1: 20/(1+(10/100))^1    1st iteration
+#       2: 10/(1+(10/100))^2    2nd iteration
+
+npv <- function (profit_even, profit_odd, interest_rate, time){
+  
+  pv = 0
+  
+  for(i in 1:time){
+    
+    if(i %% 2 == 0){
+      
+      pv <- profit_even/(1+ (interest_rate/100))^i 
+    }
+    else{
+      
+      pv <- profit_odd/(1+ (interest_rate/100))^i
+    }
+  }
+  return((pv))
+}
+
+
+npv(profit_even = 10, profit_odd = 20, interest_rate = 10, time = 1)
+
+
+
+
+sum(c(2,3, 4))
+
+add_three_numbers <- function(x, y, z){
+  
+  add <- x+ y+z
+  
+  return(add)
+}
+
+add_three_numbers(2, 3, 4)
+
+
+#Calculating the area of a circle
+
+Cal_area <- function(p, r){
+  
+  area <- p*r^2
+  
+  return(area)
+}
+
+Cal_area(2,3)
+
+
+
+#Calculating the shrub volume 
+cal_shrub_vol <- function(length, width, height){
+  
+  area <- length * width
+  
+  volume <- area * height  # (length*width) * height
+  
+  return (volume)
+}
+
+cal_shrub_vol (2, 3.5, 4.3)
+
+
+
+
+#COMPOSING FUNCTIONS (Tutorials)
+
+#Converting fahrenheit to celsius
+
+fahrenheit_to_celsius <- function(temp_F) {
+  
+  temp_C <- (temp_F - 32)* 5/9
+  
+  return(temp_C)
+}
+
+fahrenheit_to_celsius(32)
+
+#The boiling point of water
+
+fahrenheit_to_celsius(212)
+
+
+Celsius_to_kelvin <- function(temp_C){
+  
+  temp_K <- temp_C + 273.15
+  
+  return(temp_K)
+}
+
+Celsius_to_kelvin(0)
+
+
+
+#Assignment 2
+
+Names <- c("Seth", "Patrick", "Kelvin", "Eben", "Irene", "General", "Eric", "Owusu", "Richie", "Unique")
+Age <- c(28, 34, 29, 35, 65, 36, 74, 20, 100, 45)
+
+
+
+data.frame(Names, Age)
+
+df <- data.frame(Names, Age)
+print (df)
+
+
+#View it in excel format
+excel_data <- data.frame(Names, Age)
+print(excel_data)
+
+colnames(excel_data)
+glimpse(excel_data)
+
+
+#1aDescriptive analyses
+
+#The mean
+mean_age <- mean(Age) 
+print(mean_age)
+
+mean(Age, trim = 0.1) #Removing 10% from the bottom and top from the data
+
+#OR mean(Age)
+
+#The median
+median_age <- median(Age)
+print(median_age) 
+
+
+#The standard deviation 
+standv_age <- sd(Age)
+print (standv_age)
+
+#the variance
+variance_age <- var(Age)
+print(variance_age) 
+
+#OR taking the square root of the variance
+
+sdv_age <- sqrt(var(Age))
+print(sdv_age)
+
+
+#The minimum age
+
+min_age <- min(Age)
+
+#The maximum age
+max_age <- max(Age)
+
+#The range age
+range_age <- range(Age)
+
+
+#The quantile
+quantile_age1 <- quantile(Age, probs = 90/100)
+
+quantile_age2 <- quantile(Age, probs = c(0.2, 0.5, 0.9, 1)) 
+print(quantile_age2)
+
+#The sum of the ages
+sume_age <- sum(Age)
+
+
+#The summary of the data set
+summary(df)
+
+summary(Age)
+summary(Names)
+
+
+
+col_names <- function (data){
+  
+  col_names2 <- colnames(data)
+  
+  return (col_names2)
+  
+}
+
+col_names(data = df)
+
+
+
+
+
+#2c 
+# time (t) = 10
+# t = 1, 2, 3, ...,10
+#@ odd year feed quantity = 40
+#@ even year feed quantity = 10
+# pig_age = time
+
+#weight = ((pig_age)^2 /year)*feed_quantity
+
+#@ sum_weight <- sum (((pig_age)^2 /year)*feed_quantity)
+
+# @ t = 1(odd)
+
+# weight <- ((1)^2 /2) * 40
+
+#@ t = 2 (even)
+
+#weight <- ((2)^2 /2) * 10
+
+sum_age2 <- function (time,year, feed_quantity_even, feed_quantity_odd){
+  
+  sum_weight = 0
+  
+  for(i in 1:time){
+    
+    if (i %% 2 == 0){
+      
+      sum_weight <- sum (((i)^2 /year)*feed_quantity_even) # perform this formula
+      
+    }
+    
+    else{
+      
+      sum_weight <- sum (((i)^2 /year)*feed_quantity_odd)
+      
+    }
+  }
+  return((sum_weight))
+}
+
+
+sum_age2(time = 7, year = 7, feed_quantity_even = 10, feed_quantity_odd = 40)
+
+
+
+#Creating a data frame using functions
+
+BasicStats <-  function(Age){
+  
+  Data_titles <- c("Mean", "Median", "Variance", "Min", "Max", "Standard deviation")
+  
+  df <- data.frame(1:6, row.names = Data_titles)
+  
+  names(df)[1] <- "Basic Statistics"
+  
+  df[1] <- c(mean(Age), median(Age), var(Age), min(Age), max(Age), sd(Age))
+  
+  print(df)
+  
+}
+BasicStats(Age)
+
+
+df <- data.frame(Names, Age)
+print(df)
+
+#Calculate the mean
+Mean_age <- function(Age){
+  
+  mean_age2 <- sum(Age)/length(Age)   # mean_age <- mean(Age)
+  
+  return(mean_age2)
+}
+Mean_age(Age)
+
+
+# Standard error of mean
+
+Age <- c(28, 34, 29, 35, 65, 36, 74, 20, 100, 45)
+
+std_mean <- function(Age){
+  
+  
+  std_mean2 <- sd(Age)/sqrt(length(Age))
+  
+  return(std_mean2)
+}
+
+std_mean(Age)
+
+
+
+#Standard deviation of mean
+std_dev <- function (Age){
+  
+  mean <- sum(Age)/length(Age)
+  
+  std_mean <- sqrt(sum((Age - mean(Age))^2/ (length(Age)-1)))
+  
+  return(std_mean)
+}
+
+std_dev(Age)
+
+
+#Minimum age
+min_age <- function(Age){
+  
+  min_age2 <- which.min(Age)       #This function gives you the position of the minimum age
+  
+  return(min_age2)
+  
+}
+
+ #Alternative                      #This function gives you the exact minimum value from the data set
+min_age <- function(Age){
+  
+  min_age2 <- min(Age)
+  
+  return(min_age2)
+
+}
+min_age(Age)
+
+
+
+#The z- score
+
+# zscorex = (x mean(x))/sd(x)
+
+#Standard deviation = sqrt(sum((Age - mean(Age))^2/ (length(Age)-1)))
+
+
+zscore_age <- function(Age){
+  
+  zscore_age2 <- (Age - mean(Age)) / sqrt(sum((Age - mean(Age))^2/ (length(Age)-1)))
+  
+  return(zscore_age2)
+}
+
+zscore_age(Age)
+
+
+sd(Age)
+
+
+length(Age)
+sd(Age)
+mean(Age)
+var(Age)
+length(Data_titles)
+

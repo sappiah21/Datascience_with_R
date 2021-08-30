@@ -1,4 +1,4 @@
-Creating variable with vectors
+#Creating variable with vectors
 #Name
 names<-c('Seth', 'Patrick', 'Owusu', 'Irene')
 
